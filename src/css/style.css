@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 30px 20px;
+  background-color: aquamarine;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: default;
+}
+
+.conteiner {
+  background-color:azure;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.collapse {
+  background-color: blue;
+  display: inline-block;
+  color: white;
+  padding: 10px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: inherit;
+  border-radius: 10px;
+}
+
+.collapse-insert2 {
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin: 10px 0px 10px 3px;
+  opacity: 0;
+  /* animation: ani 1s linear infinite 2s alternate-reverse; */
+
+  animation-name: ani2; /* параметр, указывающий на набор ключевых кадров (@keaframes), который будет выбран для анимации */
+
+  animation-duration: 4.5s; /* параметр, определяющий длительность анимации (по умолчанию 0) */
+
+  /* animation-delay: 2s; параметр, определяющий продолжительность задержки анимации (по умолчанию 0) */
+
+  /* animation-iteration-count: infinite; параметр, определяющий количество повторений анимации (по умолчанию 1)
+  Может быть указан как определенное количество (5) или как бесконечное (infinite): */
+
+  animation-direction: normal; /* параметр, определяющий направление воспроизведения анимации (по умолчанию normal)
+  Может быть указан как определенное количество (5) и как бесконечное (infinite): 
+  - normal, reverse, alternate, alternate-reverse */
+
+  /* animation-timing-function: linear; параметр, определяющий временную функцию
+  воспроизведения анимации */
+
+  animation-fill-mode: forwards; /* параметр, определяющий, как нужно применять стили к
+  объекту анимации до и после ее выполнения 
+  - forwards — по окончании анимации элемент сохранит стили последнего
+  ключевого кадра
+  - backwards — элемент сохранит стиль первого ключевого кадра на
+  протяжении задержки перед началом анимации
+  - both — одновременное выполнение forwards и backwards
+  - none — значение по умолчанию */
+
+  /* animation-play-state: running; параметр, определяющий состояние анимации: пауза или
+  проигрыш 
+  - running — анимация выполняется, значение по умолчанию
+  - paused — анимация приостановлена */
+}
+
+@keyframes ani2 { /* набор ключевых точек по имени ani*/
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.collapse-insert {
+  /* padding: 10px; */
+  border: 0px solid grey;
+  border-radius: 5px;
+  /* margin: 10px 0px 10px 3px; */
+  transition: height 1s ease-in-out;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-y: hidden; /* скрывает текст за пределами блока по вертикале */
+}
+
+.collapse-insert.active {
+  padding: 10px;
+  margin: 10px 0px 10px 3px;
+}
