@@ -1,6 +1,7 @@
 export default class WidgetCallaps {
-  constructor(parent) {
+  constructor(parent, content) {
     this.parent = parent;
+    this.content = content;
   }
 
   init() {
@@ -13,11 +14,11 @@ export default class WidgetCallaps {
     div.textContent = 'Collapse';
     const insert = WidgetCallaps.addTagHTML(this.parent, 'collapse-insert');
     const body = WidgetCallaps.addTagHTML(insert, 'collapse-body');
-    body.textContent = textForWidget;
+    body.textContent = this.content;
     insert.style.height = '0px';
 
     div.addEventListener('click', () => {
-      insert.style.transition = ''; // отменяю добавленную анимацию 
+      insert.style.transition = ''; // отменяю добавленную анимацию
       insert.classList.toggle('active');
       if (insert.className.includes('active')) {
         insert.style.height = `${body.offsetHeight + 11}px`;
@@ -49,35 +50,3 @@ export default class WidgetCallaps {
     return div;
   }
 }
-
-const textForWidget = `Много много текста. 
-  Много много текста. Много много текста. 
-  Много много текста. Много много текста. 
-  Много много текста. Много много текста. 
-  Много много текста. Много много текста. 
-  Много много текста. Много много текста. 
-  Много много текста.Много много текста. 
-  Много много текста. Много много текста. 
-  Много много текста. Много много текста. 
-  Много много текста. Много много текста. 
-  Много много текста. Много много текста. 
-  Много много текста. Много много текста. 
-  Много много текста.Много много текста. 
-  Много много текста. Много много текста. 
-  Много много текста. Много много текста. 
-  Много много текста. Много много текста. 
-  Много много текста. Много много текста. 
-  Много много текста. Много много текста. 
-  Много много текста.Много много текста. 
-  Много много текста. Много много текста. 
-  Много много текста. Много много текста. 
-  Много много текста. Много много текста. 
-  Много много текста. Много много текста. 
-  Много много текста. Много много текста. 
-  Много много текста.Много много текста. 
-  Много много текста. Много много текста. 
-  Много много текста. Много много текста. 
-  Много много текста. Много много текста. 
-  Много много текста. Много много текста. 
-  Много много текста. Много много текста. 
-  Много много текста.`;

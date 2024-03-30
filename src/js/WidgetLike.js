@@ -2,6 +2,7 @@ export default class WidgetLike {
   constructor(parent) {
     this.parent = parent;
     this.heartsList = [];
+    this.version = ['first-heart', 'second-heart', 'therd-heart', 'four-heart'];
   }
 
   init() {
@@ -15,6 +16,8 @@ export default class WidgetLike {
 
     like.addEventListener('click', () => {
       const heart = WidgetLike.addTagHTML(like, 'heart');
+      const index = Math.floor(Math.random() * this.version.length);
+      heart.classList.add(this.version[index]);
       this.heartsList.push(heart);
     });
 

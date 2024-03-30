@@ -23,7 +23,7 @@ export default class WidgetChat {
       this.circle.style.height = '0px';
       this.circle.style.right = '42px';
       this.circle.style.bottom = '42px';
-      
+
       this.form.style.width = '200px';
       this.form.style.height = '200px';
       this.form.style.padding = '10px';
